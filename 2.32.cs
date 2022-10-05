@@ -1,10 +1,17 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 int main()
 {
-    int i;
-    for (i=0;i<=10;i++){
-        printf("%d\t %d\t %d\n",i,i*i,i*i*i);
-    }
+    float w,h,bmi;
+    scanf("%f %f",&w,&h);
+    bmi=(w/h*100/h*100);
+    if(bmi>=30)
+        printf("Obese,%f",bmi);
+    if(bmi<30&&bmi>=25)
+        printf("Overweight,%f" ,bmi);
+    if(bmi<25&&bmi>=18.5)
+        printf("Normal,%f" ,bmi);
+    if(bmi<18.5)
+        printf("Linderweight,%f" ,bmi);
     return 0;
 }
